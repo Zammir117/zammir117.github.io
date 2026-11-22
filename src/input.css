@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ base */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem; /* las anclas no quedan debajo de la barra fija */
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+  /* Foco visible y consistente en todo el sitio (WCAG 2.4.7). */
+  :focus-visible {
+    outline: 3px solid theme('colors.brand.600');
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-dark :focus-visible { outline-color: #fff; }
+  ::selection { @apply bg-brand-200 text-brand-950; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+/* ------------------------------------------------------------------ componentes */
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8; }
+
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-[100] rounded-lg bg-brand-900 px-4 py-2 font-semibold text-white;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
+  }
+  .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-800; }
+  .btn-secondary { @apply btn border border-brand-600 bg-white text-brand-700 hover:bg-brand-50; }
+  .btn-light { @apply btn bg-white text-brand-800 hover:bg-brand-50; }
+  .btn-ghost-light { @apply btn border border-white/70 text-white hover:bg-white/10; }
+
+  /* Estado de tienda antes del lanzamiento: NO es la insignia oficial de Google ni de Apple. */
+  .store-status {
+    @apply inline-flex min-h-[44px] items-center gap-3 rounded-xl border border-ink/15 bg-white px-4 py-2 text-left text-ink;
+  }
+
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.14em] text-brand-700; }
+  .section { @apply py-16 sm:py-20 lg:py-24; }
+  .section-title { @apply mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl; }
+  .section-lead { @apply mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft; }
+
+  .card { @apply rounded-2xl border border-ink/10 bg-white p-6 shadow-card; }
+
+  .nav-link {
+    @apply rounded-md px-3 py-2 text-sm font-medium text-ink-soft hover:bg-brand-50 hover:text-brand-800;
+  }
+
+  /* -------------------------------------------------------------- páginas legales */
+  .legal { @apply text-base leading-relaxed text-ink-soft; }
+  .legal h2 { @apply mt-12 scroll-mt-24 border-t border-ink/10 pt-8 text-2xl font-bold text-ink; }
+  .legal h2:first-of-type { @apply mt-8; }
+  .legal h3 { @apply mt-6 text-lg font-semibold text-ink; }
+  .legal p { @apply mt-4; }
+  .legal ul { @apply mt-4 list-disc space-y-2 pl-6; }
+  .legal ol { @apply mt-4 list-decimal space-y-2 pl-6; }
+  .legal li::marker { @apply text-brand-600; }
+  .legal a { @apply font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-700; }
+  .legal strong { @apply font-semibold text-ink; }
+  .legal table { @apply mt-4 w-full border-collapse text-left text-sm; }
+  .legal th { @apply border-b-2 border-brand-200 bg-brand-50 px-3 py-2 font-semibold text-ink; }
+  .legal td { @apply border-b border-ink/10 px-3 py-2 align-top; }
+  .legal .table-wrap { @apply mt-4 overflow-x-auto rounded-xl border border-ink/10; }
+  .legal .table-wrap table { @apply mt-0; }
+  .legal code { @apply rounded bg-brand-50 px-1.5 py-0.5 text-[0.9em] text-brand-900; }
+
+  .callout { @apply mt-6 rounded-2xl border-l-4 p-5; }
+  .callout-info { @apply callout border-brand-600 bg-brand-50 text-brand-950; }
+  .callout-warn { @apply callout border-red-600 bg-red-50 text-red-950; }
+  .callout-amber { @apply callout border-amber-500 bg-amber-50 text-amber-950; }
+
+  .toc a { @apply block rounded-md px-3 py-1.5 text-sm text-ink-soft no-underline hover:bg-brand-50 hover:text-brand-800; }
+
+  /* -------------------------------------------------------------- FAQ (<details>) */
+  .faq-item { @apply rounded-2xl border border-ink/10 bg-white shadow-card; }
+  .faq-item summary {
+    @apply flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left font-semibold text-ink hover:bg-brand-50/60;
+  }
+  .faq-item[open] summary { @apply rounded-b-none; }
+  .faq-item .faq-chevron { @apply h-5 w-5 shrink-0 text-brand-700 transition-transform; }
+  .faq-item[open] .faq-chevron { @apply rotate-180; }
+  .faq-item .faq-body { @apply px-5 pb-5 leading-relaxed text-ink-soft; }
+
+  /* -------------------------------------------------------------- mockup de teléfono */
+  .phone {
+    @apply relative mx-auto w-[260px] rounded-[2.75rem] bg-ink p-2.5 shadow-phone sm:w-[290px];
+    aspect-ratio: 9 / 19.5;
+  }
+  .phone-screen { @apply relative h-full w-full overflow-hidden rounded-[2.2rem] bg-[#F8FAF9]; }
+  .phone-notch { @apply absolute left-1/2 top-2 z-20 h-5 w-20 -translate-x-1/2 rounded-full bg-ink; }
+  .phone-screen > img { @apply absolute inset-0 z-10 h-full w-full object-cover; }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

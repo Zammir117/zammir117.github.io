@@ -1,0 +1,42 @@
+tudominio.com
+# ============================================================================================
+# CNAME.example — cómo conectar un dominio propio a GitHub Pages
+# ============================================================================================
+# IMPORTANTE: el archivo final debe llamarse CNAME (sin extensión) y contener SOLO el dominio
+# en una línea (por ejemplo: tudominio.com o www.tudominio.com). Borra todas estas líneas de
+# comentario al renombrarlo; GitHub no acepta comentarios en CNAME.
+#
+# 1) Conseguir el dominio
+#    - Con el GitHub Student Developer Pack (https://education.github.com/pack) suele haber
+#      ofertas de dominio gratis por un año con registradores aliados (por ejemplo Namecheap o
+#      Name.com). Revisa en el Pack qué oferta y qué extensiones están vigentes hoy.
+#    - Los dominios .co los venden registradores acreditados; normalmente no entran en las ofertas gratis.
+#
+# 2) Configurar los registros DNS en tu registrador
+#    Dominio raíz (apex, ej. tudominio.com) -> 4 registros A:
+#        A     @     185.199.108.153
+#        A     @     185.199.109.153
+#        A     @     185.199.110.153
+#        A     @     185.199.111.153
+#    (Opcional, IPv6) 4 registros AAAA:
+#        AAAA  @     2606:50c0:8000::153
+#        AAAA  @     2606:50c0:8001::153
+#        AAAA  @     2606:50c0:8002::153
+#        AAAA  @     2606:50c0:8003::153
+#    Subdominio www -> registro CNAME:
+#        CNAME www   zammir117.github.io.
+#    Verifica las IPs vigentes en la documentación oficial:
+#    https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site
+#
+# 3) Activar el dominio en GitHub
+#    - Renombra este archivo a CNAME, deja solo el dominio y haz commit + push.
+#    - En GitHub: Settings -> Pages -> Custom domain -> escribe el dominio -> Save.
+#    - Espera a que el chequeo DNS pase (puede tardar desde minutos hasta 24-48 horas).
+#    - Marca "Enforce HTTPS" cuando GitHub emita el certificado.
+#    - Recomendado: verifica el dominio en Settings (de tu cuenta) -> Pages -> Add a domain,
+#      para evitar que otra cuenta lo reclame.
+#
+# 4) Actualizar las URLs absolutas del sitio (canonical, og:url, og:image, JSON-LD, sitemap,
+#    robots) con un solo comando, desde la carpeta pettypets-web:
+#        .\tools\cambiar-dominio.ps1 -NuevoDominio "https://tudominio.com"
+#    Luego actualiza las URLs en Play Console y App Store Connect.

@@ -1,0 +1,7 @@
+# Ejecutable del Tailwind Standalone CLI (se descarga aparte; no se versiona)
+tailwindcss.exe
+tailwindcss
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

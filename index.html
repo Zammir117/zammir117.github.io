@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PettyPets — Gestión clínica y cuidado de mascotas en familia</title>
+  <meta name="description" content="App gratuita para 8 especies: carnet veterinario con QR, auditor de vacunas, semáforo de alimentos, porciones exactas y Modo Enfermería compartido en familia. Funciona sin internet. Hecha en Colombia.">
+  <link rel="canonical" href="https://zammir117.github.io/">
+  <meta name="theme-color" content="#00796B">
+  <meta name="author" content="Johhan Zammir Soto Andrade">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PettyPets">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="PettyPets — Gestión clínica y cuidado de mascotas en familia">
+  <meta property="og:description" content="Carnet veterinario con QR, auditor de vacunas, nutrición precisa y Modo Enfermería compartido para 8 especies. Gratis y sin internet.">
+  <meta property="og:url" content="https://zammir117.github.io/">
+  <meta property="og:image" content="https://zammir117.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de PettyPets: un cachorro Rottweiler sobre fondo turquesa, con el texto Gestión clínica y cuidado de mascotas en familia.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PettyPets — Gestión clínica y cuidado de mascotas en familia">
+  <meta name="twitter:description" content="Carnet veterinario con QR, auditor de vacunas, nutrición precisa y Modo Enfermería compartido para 8 especies.">
+  <meta name="twitter:image" content="https://zammir117.github.io/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "PettyPets",
+    "url": "https://zammir117.github.io/",
+    "image": "https://zammir117.github.io/assets/logo.png",
+    "description": "App para la gestión clínica y el cuidado de mascotas en familia: 8 especies, carnet veterinario con QR, auditor de vacunas, semáforo nutricional, porciones exactas, Modo Enfermería y hogar compartido. Funciona sin internet y sincroniza en la nube al vincular una cuenta de Google.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android 8.0 o superior",
+    "inLanguage": "es-CO",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "COP" },
+    "author": {
+      "@type": "Person",
+      "name": "Johhan Zammir Soto Andrade",
+      "url": "https://github.com/Zammir117",
+      "address": { "@type": "PostalAddress", "addressLocality": "Santiago de Cali", "addressCountry": "CO" }
+    },
+    "publisher": { "@type": "Person", "name": "Johhan Zammir Soto Andrade" },
+    "privacyPolicy": "https://zammir117.github.io/privacidad.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿PettyPets funciona sin internet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todos los cálculos, el carnet, el QR, el semáforo de alimentos, los horarios y las alarmas funcionan dentro del celular, sin conexión. Internet solo se necesita para iniciar sesión con Google, sincronizar un hogar compartido y eliminar una cuenta vinculada." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el hogar compartido?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El propietario vincula su cuenta de Google, crea el hogar y genera desde Perfil un código de invitación de 10 caracteres que vence a los 7 días. Los cuidadores se unen con ese código. Mascotas, vacunas, tratamientos, horarios y tomas se sincronizan en tiempo real; cada toma queda firmada con el nombre de quien la dio y, si dos personas la marcan al mismo tiempo, solo cuenta la primera." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿PettyPets reemplaza al veterinario?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. PettyPets es una herramienta informativa, organizativa y preventiva. No sustituye el diagnóstico, la prescripción ni la atención presencial de un médico veterinario. Ante una emergencia, acude de inmediato a un veterinario." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿PettyPets es gratuita?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. PettyPets es gratuita para los tutores: no tiene compras dentro de la app, no muestra anuncios y no usa el identificador de publicidad del celular." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Estará disponible para iPhone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Por ahora PettyPets es una app para Android 8.0 o superior. La versión para iPhone está en preparación y todavía no tiene fecha de lanzamiento." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo elimino mi cuenta y mis datos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En la app: Perfil, tarjeta Privacidad y cuenta, botón Eliminar mi cuenta y todos mis datos. Si ya desinstalaste la app, escribe a zammirandrade@gmail.com desde el correo de tu cuenta de Google con el asunto Eliminar cuenta PettyPets. Los detalles están en https://zammir117.github.io/eliminar-cuenta.html." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué datos recopila PettyPets?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En modo local todo queda en el celular. Si vinculas Google, se guardan tu nombre, correo y foto de perfil de Google y los datos de tu hogar en Firebase. Con tu permiso, que puedes retirar en Perfil, se envían estadísticas de uso y reportes de fallos sin tu nombre, tu correo, nombres de mascotas, fotos ni lo que escribes. Las fotos de las mascotas y de los carnés nunca salen del celular." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo me uno a la beta?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Escribe a zammirandrade@gmail.com con el asunto Quiero unirme a la beta cerrada de PettyPets e indica el correo de Gmail que usas en Google Play. Cuando Google apruebe la prueba cerrada recibirás el enlace para instalar la app desde Google Play." }
+      }
+    ]
+  }
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <!-- ============================================================ NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80" data-header>
+    <nav class="container-site flex h-16 items-center justify-between gap-4" aria-label="Principal">
+      <a href="#inicio" class="flex items-center gap-2.5 rounded-lg font-extrabold tracking-tight text-ink">
+        <picture>
+          <source srcset="assets/img/logo-96.webp" type="image/webp">
+          <img src="assets/logo.png" width="40" height="40" alt="" class="h-10 w-10 rounded-xl">
+        </picture>
+        <span class="text-lg">PettyPets</span>
+      </a>
+
+      <ul class="hidden items-center gap-1 xl:flex">
+        <li><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+        <li><a class="nav-link" href="#especies">Especies</a></li>
+        <li><a class="nav-link" href="#empresas">Para empresas</a></li>
+        <li><a class="nav-link" href="#respaldo">Respaldo científico</a></li>
+        <li><a class="nav-link" href="#quienes-somos">Quiénes somos</a></li>
+        <li><a class="nav-link" href="#faq">Preguntas frecuentes</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="mailto:zammirandrade@gmail.com?subject=Quiero%20unirme%20a%20la%20beta%20cerrada%20de%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AQuiero%20probar%20PettyPets%20antes%20del%20lanzamiento.%0A%0ACorreo%20de%20Google%20%28Gmail%29%20que%20uso%20en%20Google%20Play%3A%20%0AModelo%20de%20celular%20y%20versi%C3%B3n%20de%20Android%3A%20%0AEspecies%20que%20cuido%3A%20%0A%0AGracias." class="btn-primary hidden sm:inline-flex">Únete a la beta</a>
+        <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-ink hover:bg-brand-50 xl:hidden" aria-expanded="false" aria-controls="menu-movil" data-menu-button>
+          <span class="sr-only" data-menu-label>Abrir menú</span>
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="menu-movil" class="hidden border-t border-ink/10 bg-white xl:hidden" data-menu>
+      <ul class="container-site flex flex-col gap-1 py-3">
+        <li><a class="nav-link block text-base" href="#funcionalidades">Funcionalidades</a></li>
+        <li><a class="nav-link block text-base" href="#especies">Especies</a></li>
+        <li><a class="nav-link block text-base" href="#empresas">Para empresas</a></li>
+        <li><a class="nav-link block text-base" href="#respaldo">Respaldo científico</a></li>
+        <li><a class="nav-link block text-base" href="#quienes-somos">Quiénes somos</a></li>
+        <li><a class="nav-link block text-base" href="#faq">Preguntas frecuentes</a></li>
+        <li class="pt-2"><a href="mailto:zammirandrade@gmail.com?subject=Quiero%20unirme%20a%20la%20beta%20cerrada%20de%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AQuiero%20probar%20PettyPets%20antes%20del%20lanzamiento.%0A%0ACorreo%20de%20Google%20%28Gmail%29%20que%20uso%20en%20Google%20Play%3A%20%0AModelo%20de%20celular%20y%20versi%C3%B3n%20de%20Android%3A%20%0AEspecies%20que%20cuido%3A%20%0A%0AGracias." class="btn-primary w-full">Únete a la beta</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ============================================================ HERO -->
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white pt-28 sm:pt-32">
+      <div aria-hidden="true" class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -left-40 top-64 h-80 w-80 rounded-full bg-cyan-200/30 blur-3xl"></div>
+
+      <div class="container-site relative grid items-center gap-12 pb-16 lg:grid-cols-[1.15fr_1fr] lg:pb-24">
+        <div class="text-center lg:text-left">
+          <p class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3 py-1 text-xs font-semibold text-brand-800">
+            <span class="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span>
+            Gratis · Android · Hecha en Cali, Colombia
+          </p>
+          <h1 class="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+            La salud de tu mascota, <span class="text-brand-600">organizada y sin errores</span>, para toda la familia.
+          </h1>
+          <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-soft lg:mx-0">
+            Carnet veterinario con QR, auditor de vacunas, nutrición precisa y Modo Enfermería compartido para <strong class="text-ink">8 especies</strong>.
+            Funciona <strong class="text-ink">sin internet</strong> y se sincroniza en la nube cuando vinculas tu cuenta de Google.
+          </p>
+
+          <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <a href="mailto:zammirandrade@gmail.com?subject=Quiero%20unirme%20a%20la%20beta%20cerrada%20de%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AQuiero%20probar%20PettyPets%20antes%20del%20lanzamiento.%0A%0ACorreo%20de%20Google%20%28Gmail%29%20que%20uso%20en%20Google%20Play%3A%20%0AModelo%20de%20celular%20y%20versi%C3%B3n%20de%20Android%3A%20%0AEspecies%20que%20cuido%3A%20%0A%0AGracias." class="btn-primary px-6 text-base">
+              Únete a la beta
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="mailto:zammirandrade@gmail.com?subject=Pruebas%20cerradas%20y%20alianzas%20con%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AMe%20interesa%20PettyPets%20para%3A%0A%5B%20%5D%20Participar%20en%20las%20pruebas%20cerradas%0A%5B%20%5D%20Una%20alianza%20comercial%0A%0ANombre%20/%20empresa%3A%20%0ACu%C3%A9ntame%20brevemente%20tu%20propuesta%3A%20%0A" class="btn-secondary px-6 text-base">Pruebas cerradas y alianzas</a>
+          </div>
+
+          <!-- Estado en tiendas. Al publicar: reemplazar el primer bloque por la insignia oficial
+               "Disponible en Google Play" enlazada a {{URL_PLAY_STORE}} (ver README). -->
+          <ul class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start" aria-label="Disponibilidad en tiendas">
+            <li class="store-status">
+              <svg class="h-6 w-6 text-brand-700" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3.5v17a.5.5 0 0 0 .76.43l14-8.5a.5.5 0 0 0 0-.86l-14-8.5A.5.5 0 0 0 6 3.5z"/></svg>
+              <span class="leading-tight"><span class="block text-[11px] font-medium uppercase tracking-wide text-ink-soft">Próximamente</span><span class="block text-sm font-bold">en Google Play</span></span>
+            </li>
+            <li class="store-status">
+              <svg class="h-6 w-6 text-ink-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+              <span class="leading-tight"><span class="block text-[11px] font-medium uppercase tracking-wide text-ink-soft">En preparación</span><span class="block text-sm font-bold">para iOS</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mockup de teléfono: muestra assets/screenshots/hero.webp; si aún no existe, queda la vista de respaldo. -->
+        <div class="relative">
+          <div class="phone">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-screen">
+              <img src="assets/screenshots/hero.webp" width="1080" height="2340" alt="Pantalla Cuidado de PettyPets con los indicadores diarios de la mascota" fetchpriority="high" decoding="async" onerror="this.remove()">
+              <!-- Vista de respaldo (texto ilustrativo, no es una captura real) -->
+              <div class="flex h-full flex-col" aria-hidden="true">
+                <div class="bg-gradient-to-b from-brand-600 to-brand-900 px-4 pb-5 pt-9 text-white">
+                  <div class="flex items-center gap-2">
+                    <picture>
+                      <source srcset="assets/img/logo-96.webp" type="image/webp">
+                      <img src="assets/logo.png" width="32" height="32" alt="" class="h-8 w-8 rounded-lg">
+                    </picture>
+                    <div class="leading-tight">
+                      <p class="text-[11px] opacity-80">Cuidado de hoy</p>
+                      <p class="text-sm font-bold">Tu mascota</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 rounded-xl bg-white/15 p-3">
+                    <p class="text-[10px] uppercase tracking-wide opacity-80">Condición corporal</p>
+                    <div class="mt-1 flex items-center gap-2">
+                      <span class="h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
+                      <p class="text-xs font-semibold">Peso dentro de la curva de su raza</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 p-3">
+                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Comida</p><p class="text-sm font-bold text-orange-700">g / día</p></div>
+                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Agua</p><p class="text-sm font-bold text-cyan-700">ml / día</p></div>
+                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Tomas al día</p><p class="text-sm font-bold text-ink">Horario</p></div>
+                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Ejercicio</p><p class="text-sm font-bold text-violet-700">min / día</p></div>
+                </div>
+                <div class="mx-3 rounded-xl border-l-4 border-red-500 bg-white p-2.5 shadow-sm">
+                  <p class="text-[10px] font-semibold text-red-700">Modo Enfermería</p>
+                  <p class="text-xs text-ink">Próxima dosis · confirmar toma</p>
+                </div>
+                <div class="mx-3 mt-2 rounded-xl border-l-4 border-cyan-500 bg-white p-2.5 shadow-sm">
+                  <p class="text-[10px] font-semibold text-cyan-700">Carnet</p>
+                  <p class="text-xs text-ink">Refuerzo de vacuna pendiente</p>
+                </div>
+                <div class="mt-auto grid grid-cols-5 border-t border-ink/10 bg-white px-2 py-2 text-center text-[9px] text-ink-soft">
+                  <span class="font-bold text-brand-700">Cuidado</span><span>Comidas</span><span>Enfermería</span><span>Carnet</span><span>Semáforo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cifras del catálogo (datos reales del proyecto, no de usuarios) -->
+      <div class="border-y border-ink/10 bg-white">
+        <dl class="container-site grid grid-cols-2 gap-6 py-8 text-center md:grid-cols-4">
+          <div class="flex flex-col"><dt class="text-sm text-ink-soft">especies con motor clínico propio</dt><dd class="order-first text-3xl font-extrabold text-brand-700">8</dd></div>
+          <div class="flex flex-col"><dt class="text-sm text-ink-soft">razas con curva de crecimiento por sexo</dt><dd class="order-first text-3xl font-extrabold text-brand-700">167</dd></div>
+          <div class="flex flex-col"><dt class="text-sm text-ink-soft">reglas de cuidado mes a mes</dt><dd class="order-first text-3xl font-extrabold text-brand-700">1.304</dd></div>
+          <div class="flex flex-col"><dt class="text-sm text-ink-soft">alimentos y 272 nombres regionales</dt><dd class="order-first text-3xl font-extrabold text-brand-700">41</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================================================ ESPECIES -->
+    <section id="especies" class="section bg-white" aria-labelledby="especies-titulo">
+      <div class="container-site">
+        <p class="eyebrow">8 motores clínicos</p>
+        <h2 id="especies-titulo" class="section-title">Una lógica distinta para cada especie</h2>
+        <p class="section-lead">Cada especie tiene su propio motor de cuidado y su propio motor de vacunación. Usan la curva de crecimiento de la raza y el sexo de tu mascota, y convierten kg ↔ g según su tamaño. Además, 6 razas criollas (como el Criollo / Mestizo o el Marranito criollo) se evalúan con un motor general.</p>
+
+        <ul class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7.5C8.3 5.9 10 5 12 5s3.7.9 5 2.5l-.5 6.5c-.3 3-2.3 5-4.5 5s-4.2-2-4.5-5z"/><path d="M7 7.5 4 6.2c-.8-.3-1.6.4-1.4 1.2l1.2 4.6c.2.8 1.2 1 1.7.4L7.3 10"/><path d="m17 7.5 3-1.3c.8-.3 1.6.4 1.4 1.2l-1.2 4.6c-.2.8-1.2 1-1.7.4L16.7 10"/><path d="M11 14.5h2l-1 1.2z" fill="currentColor"/><circle cx="10" cy="11" r=".7" fill="currentColor"/><circle cx="14" cy="11" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Perros</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Porción diaria por curva de raza y sexo, 4.ª dosis de Parvovirus en razas de riesgo y una sola vacuna por visita en razas toy.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9V4l4 3h6l4-3v5c1 1.3 1.5 2.8 1.5 4.5C20.5 17.6 16.7 20 12 20s-8.5-2.4-8.5-6.5C3.5 11.8 4 10.3 5 9z"/><path d="M11.2 14.5h1.6L12 15.4z" fill="currentColor"/><path d="M2.5 14.5 7 14m-4 2.5L7 15.5m14.5-1L17 14m4 2.5-4-1"/><circle cx="9.5" cy="12" r=".7" fill="currentColor"/><circle cx="14.5" cy="12" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Gatos</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Sitio fijo de aplicación por vacuna en las extremidades (nunca en la nuca), FeLV solo con prueba negativa y condición corporal.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 5a4 4 0 0 0-7.5 1.9V11c0 3.3-2 5.5-5.5 7h9a7 7 0 0 0 7-7V8.5L21 7l-2.2-.7A4 4 0 0 0 16 5z"/><path d="M9 12.5c1.5 1.5 3.5 2 6 1.5"/><path d="M10 18v3m3-3v3"/><circle cx="15.5" cy="7.5" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Aves</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Volumen máximo por sitio según el tamaño del ave, Newcastle y Marek solo en gallinas y precauciones durante la muda.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15.5a7 6 0 0 1 14-1.5h1.3a2 2 0 0 1 0 4H6a2 2 0 0 1-2-2.5z"/><circle cx="13.5" cy="8.5" r="2.2"/><path d="M4.5 16.8C2 17.3 2 20.5 4.8 20.5"/><circle cx="16.5" cy="12.5" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Roedores</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Dieta de herbívoro, alerta de antibióticos peligrosos y control preventivo; solo el capibara tiene esquema de vacunas.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 5H18a2 2 0 0 1 0 4H8a3 3 0 0 0 0 6h8a3 3 0 0 1 0 6H4"/><path d="M20 7h2m0 0 1-1m-1 1 1 1"/><circle cx="17.5" cy="6.6" r=".6" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Serpientes</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Presa cada cierto número de días según su tamaño, alerta por temperatura baja y fármacos prohibidos como la ivermectina.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="7"/><path d="M6.6 8.6 5 4.5l4 2m8.4 2.1L19 4.5l-4 2"/><ellipse cx="12" cy="15.3" rx="3" ry="2"/><circle cx="11" cy="15.3" r=".5" fill="currentColor"/><circle cx="13" cy="15.3" r=".5" fill="currentColor"/><circle cx="9.5" cy="11" r=".7" fill="currentColor"/><circle cx="14.5" cy="11" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Cerdos <span class="font-medium text-ink-soft">(marranitos)</span></h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Porciones para Mini Pig, alerta térmica porque no sudan, hierro solo en lechones y Peste Porcina Clásica según el ICA.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21v-5l-4.2-2.4c-1-.6-1.2-2-.4-2.8L9 6V3l2.5 2C16 5 19 8.5 19 13v8"/><path d="M11.5 5c2 1 3 3 3.2 5.5"/><circle cx="10.5" cy="9" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Caballos</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Encefalomielitis Equina Venezolana según el ICA, dosis del Pony al Percherón y sitios de aplicación prohibidos.</p>
+          </li>
+          <li class="card">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10l-.8 7.5a4.2 4.2 0 0 1-8.4 0z"/><path d="M7 8C5 8 3.5 6.5 3.5 4.5M17 8c2 0 3.5-1.5 3.5-3.5"/><path d="M7.2 9.5 4 10.5m12.8-1 3.2 1"/><rect x="9" y="15" width="6" height="4.5" rx="2.2"/><circle cx="10" cy="11" r=".7" fill="currentColor"/><circle cx="14" cy="11" r=".7" fill="currentColor"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Bovinos <span class="font-medium text-ink-soft">(vacas)</span></h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Ciclos oficiales de Aftosa del ICA, Brucelosis solo en terneras de 3 a 8 meses y refuerzo anual de clostridiales.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================ FUNCIONALIDADES -->
+    <section id="funcionalidades" class="section bg-[#F8FAF9]" aria-labelledby="func-titulo">
+      <div class="container-site">
+        <p class="eyebrow">Funcionalidades</p>
+        <h2 id="func-titulo" class="section-title">Todo el cuidado de tu mascota en una sola app</h2>
+        <p class="section-lead">Diseñada con la regla de los 3 clics: ver cuánto debe comer hoy, mostrar el QR al veterinario o marcar una dosis te toma, como máximo, tres toques desde la pantalla principal.</p>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2">
+          <!-- Plan de cuidado -->
+          <article class="card border-t-4 border-t-emerald-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/care.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-800">Cuidado</span>
+                <h3 class="mt-1 text-xl font-bold">Plan de cuidado mes a mes</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Seis indicadores diarios calculados para la edad exacta de tu mascota: comida, tomas al día, agua, hidratación, deposiciones normales y ejercicio.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Semáforo de condición corporal: se pone en rojo si el peso es biológicamente imposible para la raza.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Simulador ±1 mes para ver cómo cambian los cuidados mientras crece.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Alertas propias de la especie y consejo de la etapa de vida.</li>
+            </ul>
+          </article>
+
+          <!-- Auditor de vacunas -->
+          <article class="card border-t-4 border-t-cyan-500">
+            <div class="flex items-start gap-4">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-50 text-cyan-700">
+                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.3 7.5 9.5 4.4-1.2 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12.2 2.2 2.2 4.4-4.6"/></svg>
+              </span>
+              <div>
+                <span class="inline-block rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-semibold text-cyan-800">Clínico</span>
+                <h3 class="mt-1 text-xl font-bold">Auditor de vacunas y dosis</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Antes o durante la consulta, comprueba que la vacuna, el volumen y el sitio de aplicación sean correctos para la especie, la raza y la edad. El veredicto aparece en vivo: 🟢 praxis correcta, 🟡 precaución clínica o 🔴 alerta.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>Edades mínimas y máximas, dosis en ml para el peso y sitios prohibidos marcados en rojo.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>Detecta vacunas de otra especie, fármacos prohibidos y cobros duplicados por la misma vacuna.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>Buscador tolerante a errores: “¿Quisiste decir ‘Rabia’?”, con siglas y nombres populares.</li>
+            </ul>
+          </article>
+
+          <!-- Carnet + QR -->
+          <article class="card border-t-4 border-t-cyan-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/card.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-semibold text-cyan-800">Clínico</span>
+                <h3 class="mt-1 text-xl font-bold">Carnet veterinario digital con QR</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Vacunas con lote y fecha de refuerzo, desparasitaciones, controles y fotos de carnés o fórmulas, siempre en tu bolsillo.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>QR veterinario a un toque: resumen clínico portable que cualquier lector de QR abre sin internet.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>Guía de Vacunación y Dosis Segura: qué protege cada vacuna, a qué edad y con qué refuerzo.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true"></span>Fotos tomadas con la cámara o desde la galería, guardadas solo en tu celular.</li>
+            </ul>
+          </article>
+
+          <!-- Semáforo -->
+          <article class="card border-t-4 border-t-orange-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/nutrition.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-orange-50 px-2.5 py-0.5 text-xs font-semibold text-orange-800">Nutrición</span>
+                <h3 class="mt-1 text-xl font-bold">Semáforo “¿Puede comer esto?”</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Escribe un alimento y obtén la respuesta al instante para tu mascota: seguro, con moderación, peligroso o incompatible con su especie.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>41 alimentos con 272 nombres regionales: palta, auyama, choclo, tinto, mecato…</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>Reglas por raza, sexo, edad y sobrepeso: purinas en Dálmata, grasa en Schnauzer, leche en terneros.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>Se recalcula al cambiar de mascota o de edad.</li>
+            </ul>
+          </article>
+
+          <!-- Comidas -->
+          <article class="card border-t-4 border-t-orange-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/feeding.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-orange-50 px-2.5 py-0.5 text-xs font-semibold text-orange-800">Nutrición</span>
+                <h3 class="mt-1 text-xl font-bold">Comidas, horarios y porciones</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Gramos exactos por toma según especie, raza y edad, con horarios sugeridos que puedes personalizar y alarmas para cada comida.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>Analiza tu horario y avisa si deja un ayuno nocturno demasiado largo para su edad.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>Serpientes: presa cada cierto número de días, al atardecer.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" aria-hidden="true"></span>Cada comida servida queda registrada con quién la dio.</li>
+            </ul>
+          </article>
+
+          <!-- Enfermería -->
+          <article class="card border-t-4 border-t-red-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/nursing.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-800">Enfermería</span>
+                <h3 class="mt-1 text-xl font-bold">Modo Enfermería</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Medicamentos, dosis, frecuencia y las tomas del día en una lista clara. Al marcar una dosis se guarda quién la dio y a qué hora, y la toma queda bloqueada.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" aria-hidden="true"></span>Notificación a la hora de cada dosis, aunque la app esté cerrada o el celular se haya reiniciado.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" aria-hidden="true"></span>Alerta roja si escribes un fármaco prohibido para la especie.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" aria-hidden="true"></span>Nada clínico se borra sin una confirmación que muestra qué se elimina y de qué mascota.</li>
+            </ul>
+          </article>
+
+          <!-- Hogar compartido -->
+          <article class="card border-t-4 border-t-emerald-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/profile.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-800">Familia</span>
+                <h3 class="mt-1 text-xl font-bold">Hogar compartido en tiempo real</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Toda la familia ve las mismas mascotas, vacunas, tratamientos y comidas. Cuando alguien da una comida o una medicina, los demás reciben el aviso “ya se la dieron”: así se evitan las dosis dobles.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Si dos personas marcan la misma dosis al tiempo, solo cuenta la primera.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Invitación con código de 10 caracteres que vence a los 7 días; el propietario puede retirar miembros.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span>Un cuidador puede salir del hogar y llevarse las mascotas que registró, con su historial.</li>
+            </ul>
+          </article>
+
+          <!-- Tienda Ideal -->
+          <article class="card border-t-4 border-t-violet-500">
+            <div class="flex items-start gap-4">
+              <img src="assets/img/icons/store.webp" width="56" height="56" alt="" loading="lazy" decoding="async" class="h-14 w-14 shrink-0">
+              <div>
+                <span class="inline-block rounded-full bg-violet-50 px-2.5 py-0.5 text-xs font-semibold text-violet-800">Tienda</span>
+                <h3 class="mt-1 text-xl font-bold">Tienda Ideal</h3>
+              </div>
+            </div>
+            <p class="mt-4 leading-relaxed text-ink-soft">Recomendaciones a la medida de cada mascota según especie, raza, edad exacta, peso, sexo y alergias, con tallas ya calculadas.</p>
+            <ul class="mt-4 space-y-2 text-sm text-ink-soft">
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" aria-hidden="true"></span>Ropa, arneses, ruedas, presas y cabezales en la talla correcta; antiparasitarios por rango de peso.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" aria-hidden="true"></span>Filtra lo que no conviene por las alergias registradas y prioriza las fechas de temporada.</li>
+              <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" aria-hidden="true"></span>Puedes ocultarla en Perfil cuando quieras. <a href="#empresas" class="font-semibold text-violet-800 underline underline-offset-2">¿Eres una empresa?</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Cómo funciona: local vs nube -->
+        <div class="mt-14 grid gap-5 lg:grid-cols-2">
+          <div class="rounded-2xl border border-ink/10 bg-white p-6">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+              <h3 class="text-lg font-bold">Modo local, sin cuenta</h3>
+            </div>
+            <p class="mt-3 text-ink-soft">Empiezas sin registrarte. Todo se guarda cifrado en tu celular y funciona sin internet: cálculos, carnet, QR, semáforo, horarios y alarmas.</p>
+          </div>
+          <div class="rounded-2xl border border-ink/10 bg-white p-6">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-9 6 6 0 0 1 11.4 1.5A3.8 3.8 0 0 1 17.5 18z"/><path d="m9.5 13.5 2 2 3.5-3.5"/></svg></span>
+              <h3 class="text-lg font-bold">Cuenta de Google y hogar compartido</h3>
+            </div>
+            <p class="mt-3 text-ink-soft">Cuando quieras, vinculas tu cuenta de Google: tus mascotas e historial se conservan y se sincronizan con tu familia por una conexión cifrada (HTTPS/TLS).</p>
+          </div>
+        </div>
+
+        <!-- También incluye -->
+        <div class="mt-10 rounded-2xl bg-brand-900 p-6 text-white sm:p-8">
+          <h3 class="text-lg font-bold">También incluye</h3>
+          <ul class="mt-4 grid gap-3 text-sm text-brand-50 sm:grid-cols-2 lg:grid-cols-3">
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Copia de seguridad local cifrada con tu contraseña (exportar e importar).</li>
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Recordatorios de vacunas, refuerzos y rutina diaria a las 9:00 a. m.</li>
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Modo oscuro (claro, oscuro o según el sistema) con contraste accesible.</li>
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Varias mascotas con selector rápido y foto de perfil.</li>
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sin anuncios y sin identificador de publicidad.</li>
+            <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Español de Colombia, unidades métricas y razas y alimentos locales.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ PARA EMPRESAS -->
+    <section id="empresas" class="section on-dark relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-950 to-[#0B1F1C] text-white" aria-labelledby="empresas-titulo">
+      <div aria-hidden="true" class="pointer-events-none absolute -right-24 top-10 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl"></div>
+      <div class="container-site relative">
+        <p class="text-xs font-bold uppercase tracking-[0.14em] text-brand-300">Para empresas</p>
+        <h2 id="empresas-titulo" class="mt-2 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl">Una plataforma lista para vender el producto correcto a cada mascota</h2>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-brand-50">PettyPets es gratuita para los tutores y está disponible para adquisición, licencia o integración con una empresa del sector. Su valor está en que ya conoce a cada mascota (especie, raza, edad exacta, peso, sexo y alergias) y lo usa para recomendar con precisión.</p>
+
+        <!-- Motor de recomendación -->
+        <div class="mt-12 rounded-3xl border border-white/15 bg-white/5 p-6 sm:p-8">
+          <h3 class="text-xl font-bold">El motor de recomendación de la Tienda Ideal</h3>
+          <p class="mt-2 max-w-3xl text-brand-50">No muestra el mismo catálogo a todos: cruza el perfil biológico de cada mascota con las reglas de segmentación de cada producto.</p>
+          <div class="mt-8 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
+            <div class="rounded-2xl bg-white p-5 text-ink">
+              <p class="text-xs font-bold uppercase tracking-wide text-violet-700">1 · Perfil de la mascota</p>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs font-semibold">
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Especie</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Raza</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Edad exacta</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Peso</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Sexo</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Alergias</li>
+                <li class="rounded-full bg-violet-50 px-2.5 py-1 text-violet-900">Temporada</li>
+              </ul>
+            </div>
+            <div class="hidden items-center justify-center text-brand-300 lg:flex" aria-hidden="true"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="rounded-2xl bg-white p-5 text-ink">
+              <p class="text-xs font-bold uppercase tracking-wide text-violet-700">2 · Reglas del motor</p>
+              <ul class="mt-3 space-y-1.5 text-sm text-ink-soft">
+                <li>Productos por especie, raza o grupo de raza.</li>
+                <li>Tallas calculadas: ropa, arneses, ruedas, presas, cabezales.</li>
+                <li>Antiparasitarios por rango de peso.</li>
+                <li>Excluye lo incompatible con sus alergias.</li>
+              </ul>
+            </div>
+            <div class="hidden items-center justify-center text-brand-300 lg:flex" aria-hidden="true"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="rounded-2xl bg-white p-5 text-ink">
+              <p class="text-xs font-bold uppercase tracking-wide text-violet-700">3 · Recomendación</p>
+              <ul class="mt-3 space-y-1.5 text-sm text-ink-soft">
+                <li>Fechas de temporada primero: Halloween, Navidad, lluvias, cumpleaños.</li>
+                <li>Carrusel en la pantalla de inicio que cambia a medida que la mascota crece.</li>
+                <li>Etiqueta de transparencia en cada recomendación.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ventajas -->
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/15 bg-white/5 p-6">
+            <h3 class="text-lg font-bold">Vende desde tus propias páginas</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-50">El catálogo es una tabla de productos con reglas de segmentación. Hoy usa 113 productos con comercios de demostración y cada producto abre una búsqueda neutral para comparar precios. Con una integración, una empresa puede cargar su propio catálogo y hacer que cada recomendación lleve directo a su tienda en línea.</p>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/5 p-6">
+            <h3 class="text-lg font-bold">Mide el interés sin invadir</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-50">La app ya mide los clics en productos por especie, categoría y etapa de vida, sin nombres ni datos personales. El tutor controla la personalización con el interruptor “Publicidad y tallas personalizadas”.</p>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/5 p-6">
+            <h3 class="text-lg font-bold">Retención por utilidad diaria</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-50">Carnet, comidas, dosis y semáforo hacen que la familia abra la app todos los días, y el hogar compartido suma varios usuarios activos por cada mascota.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6 text-ink sm:p-8">
+            <h3 class="text-lg font-bold">¿Para quién puede ser valiosa?</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-soft">
+              <li><strong class="text-ink">Tiendas y e-commerce de mascotas:</strong> recomendación precisa por mascota, que lleva directo a la compra.</li>
+              <li><strong class="text-ink">Marcas de alimento y accesorios:</strong> presencia en el momento exacto de la etapa de vida y la talla.</li>
+              <li><strong class="text-ink">Clínicas y redes veterinarias:</strong> carnet con QR, auditor de vacunas y seguimiento de tratamientos en casa.</li>
+              <li><strong class="text-ink">Sector agropecuario:</strong> caballos, cerdos y bovinos con los programas sanitarios del ICA.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white p-6 text-ink sm:p-8">
+            <h3 class="text-lg font-bold">Qué incluye la plataforma</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-soft">
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>App Android nativa en Kotlin con Clean Architecture y MVVM.</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>8 motores clínicos y 8 motores de vacunación, uno por especie.</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Catálogos de 167 razas, 1.304 reglas de cuidado, 41 alimentos y 113 productos.</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sincronización familiar con reglas de seguridad de privilegio mínimo.</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Analítica de producto ya instrumentada, pruebas unitarias y documentación técnica.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a href="mailto:zammirandrade@gmail.com?subject=Presentaci%C3%B3n%20comercial%20de%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AQuiero%20recibir%20una%20presentaci%C3%B3n%20de%20PettyPets%20para%20mi%20empresa.%0A%0AEmpresa%3A%20%0ASector%20%28tienda%20de%20mascotas%2C%20marca%20de%20alimento%20o%20accesorios%2C%20cl%C3%ADnica%2C%20agropecuario%2C%20otro%29%3A%20%0A%C2%BFTe%20interesa%20conectar%20tu%20cat%C3%A1logo%20de%20productos%20a%20la%20Tienda%20Ideal%3F%3A%20%0A" class="btn-light px-6 text-base">Solicitar presentación comercial</a>
+          <a href="mailto:zammirandrade@gmail.com?subject=Adquisici%C3%B3n%20o%20inversi%C3%B3n%20en%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AMe%20interesa%20conocer%20la%20oportunidad%20de%20adquisici%C3%B3n%20o%20inversi%C3%B3n%20en%20PettyPets.%0A%0ANombre%20y%20empresa%3A%20%0ATipo%20de%20inter%C3%A9s%20%28compra%20de%20la%20app%2C%20licencia%2C%20inversi%C3%B3n%2C%20otro%29%3A%20%0ACu%C3%A9ntame%20brevemente%3A%20%0A" class="btn-ghost-light px-6 text-base">Hablemos de adquisición</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ RESPALDO -->
+    <section id="respaldo" class="section bg-white" aria-labelledby="respaldo-titulo">
+      <div class="container-site">
+        <p class="eyebrow">Respaldo científico y técnico</p>
+        <h2 id="respaldo-titulo" class="section-title">Cálculos basados en guías reconocidas, sobre una base técnica sólida</h2>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-ink/10 bg-[#F8FAF9] p-6 sm:p-8">
+            <h3 class="text-xl font-bold">Guías y fuentes en las que se basan los cálculos</h3>
+            <dl class="mt-6 space-y-5">
+              <div>
+                <dt class="font-semibold text-ink">WSAVA — Asociación Mundial de Veterinarios de Pequeños Animales</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Guías de vacunación de perros y gatos: vacunas esenciales y vacunas no recomendadas.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-ink">AAFP — American Association of Feline Practitioners</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Sitios de aplicación de vacunas en gatos para prevenir el sarcoma posvacunal.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-ink">ICA — Instituto Colombiano Agropecuario</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Programas sanitarios oficiales: Aftosa, Brucelosis, Peste Porcina Clásica, Rabia de origen silvestre, Encefalomielitis Equina Venezolana y Newcastle.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-ink">Fedequinas y nutrición energética</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Requisitos sanitarios para ferias equinas y fórmula de requerimiento energético en reposo (RER) ajustada por etapa de vida.</dd>
+              </div>
+            </dl>
+            <p class="mt-6 rounded-xl bg-white p-4 text-sm text-ink-soft">PettyPets usa estas guías como referencia. <strong class="text-ink">No está avalada ni certificada</strong> por estas entidades. <a href="terminos.html#bibliografia" class="font-semibold text-brand-700 underline underline-offset-2">Ver la bibliografía completa</a>.</p>
+          </div>
+
+          <div class="rounded-3xl border border-ink/10 bg-[#F8FAF9] p-6 sm:p-8">
+            <h3 class="text-xl font-bold">Arquitectura y seguridad</h3>
+            <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+              <li><p class="font-semibold text-ink">Kotlin + Jetpack Compose</p><p class="mt-1 text-sm text-ink-soft">App Android nativa con Material 3, Clean Architecture y MVVM.</p></li>
+              <li><p class="font-semibold text-ink">Room (SQLite), offline-first</p><p class="mt-1 text-sm text-ink-soft">Todo funciona en el celular; la nube es opcional.</p></li>
+              <li><p class="font-semibold text-ink">Firebase Auth + Cloud Firestore</p><p class="mt-1 text-sm text-ink-soft">Inicio con Google y sincronización familiar en tiempo real.</p></li>
+              <li><p class="font-semibold text-ink">Cifrado AES-256-GCM</p><p class="mt-1 text-sm text-ink-soft">Sesión y preferencias en Android Keystore; catálogos cifrados dentro de la app.</p></li>
+              <li><p class="font-semibold text-ink">Privilegio mínimo por hogar</p><p class="mt-1 text-sm text-ink-soft">Reglas de Firestore que validan cada campo; solo los miembros ven su hogar.</p></li>
+              <li><p class="font-semibold text-ink">Solo HTTPS y App Check</p><p class="mt-1 text-sm text-ink-soft">Sin tráfico en texto plano; verificación de integridad con Play Integrity.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="section bg-[#F8FAF9]" aria-labelledby="nosotros-titulo">
+      <div class="container-site grid items-center gap-10 lg:grid-cols-[auto_1fr]">
+        <picture class="mx-auto block">
+          <source srcset="assets/img/logo-192.webp 1x, assets/img/logo-512.webp 2x" type="image/webp">
+          <img src="assets/logo.png" width="192" height="192" alt="Logo de PettyPets: un cachorro Rottweiler con collar y placa con un corazón" loading="lazy" decoding="async" class="h-40 w-40 rounded-[2rem] shadow-card sm:h-48 sm:w-48">
+        </picture>
+        <div>
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 id="nosotros-titulo" class="section-title">Ingeniería de software al servicio del bienestar animal</h2>
+          <div class="mt-5 space-y-4 text-lg leading-relaxed text-ink-soft">
+            <p>PettyPets nació de un problema muy común: el historial de una mascota termina repartido entre carnés de papel, fórmulas, chats familiares y búsquedas en internet. Y cuando varias personas la cuidan, es fácil olvidar una dosis o darla dos veces.</p>
+            <p>La app la creó y la desarrolla <strong class="text-ink">Johhan Zammir Soto Andrade</strong>, desarrollador de software en Santiago de Cali, Colombia. El enfoque es preventivo: convertir guías veterinarias reconocidas en reglas claras para cada especie y raza, y ponerlas en el bolsillo de la familia con la seguridad y la privacidad como base.</p>
+            <p>Está pensada para Colombia: español local, unidades métricas, razas criollas, alimentos con sus nombres regionales y los programas sanitarios del ICA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ CONTACTO -->
+    <section id="contacto" class="section bg-white" aria-labelledby="contacto-titulo">
+      <div class="container-site">
+        <p class="eyebrow">Contacto</p>
+        <h2 id="contacto-titulo" class="section-title">Hablemos</h2>
+        <p class="section-lead">Escríbeme directamente; cada botón abre tu correo con el asunto listo.</p>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <div class="card flex flex-col">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 1 16 0v4a2 2 0 0 1-2 2h-1v-6h3M4 12v4a2 2 0 0 0 2 2h1v-6H4"/></svg></span>
+            <h3 class="mt-4 text-lg font-bold">Usuarios y soporte</h3>
+            <p class="mt-2 flex-1 text-sm text-ink-soft">Dudas sobre la app, problemas técnicos o solicitudes sobre tus datos.</p>
+            <a href="mailto:zammirandrade@gmail.com?subject=Soporte%20PettyPets&amp;body=Hola%3A%0A%0ADescribe%20el%20problema%20o%20la%20pregunta%3A%20%0A%0AVersi%C3%B3n%20de%20la%20app%20%28Perfil%2C%20al%20final%29%3A%20%0AModelo%20de%20celular%20y%20versi%C3%B3n%20de%20Android%3A%20%0A%C2%BFUsas%20modo%20local%20o%20cuenta%20de%20Google%3F%3A%20%0A" class="btn-secondary mt-5">Escribir a soporte</a>
+          </div>
+          <div class="card flex flex-col">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M12 10v6m-3-3h6"/></svg></span>
+            <h3 class="mt-4 text-lg font-bold">Clínicas veterinarias</h3>
+            <p class="mt-2 flex-1 text-sm text-ink-soft">Carnet con QR, auditor de vacunas y seguimiento de tratamientos en casa para tus pacientes.</p>
+            <a href="mailto:zammirandrade@gmail.com?subject=PettyPets%20para%20cl%C3%ADnicas%20veterinarias&amp;body=Hola%2C%20Johhan%3A%0A%0ARepresento%20a%20una%20cl%C3%ADnica%20veterinaria%20y%20quiero%20conocer%20PettyPets.%0A%0ANombre%20de%20la%20cl%C3%ADnica%3A%20%0ACiudad%3A%20%0ATema%20de%20inter%C3%A9s%20%28carnet%20y%20QR%2C%20auditor%20de%20vacunas%2C%20pruebas%20con%20pacientes%2C%20otro%29%3A%20%0A" class="btn-secondary mt-5">Contactar como clínica</a>
+          </div>
+          <div class="card flex flex-col">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50 text-violet-700"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <h3 class="mt-4 text-lg font-bold">Inversión o adquisición</h3>
+            <p class="mt-2 flex-1 text-sm text-ink-soft">Compra de la app, licencia o integración con tu catálogo de productos.</p>
+            <a href="mailto:zammirandrade@gmail.com?subject=Adquisici%C3%B3n%20o%20inversi%C3%B3n%20en%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AMe%20interesa%20conocer%20la%20oportunidad%20de%20adquisici%C3%B3n%20o%20inversi%C3%B3n%20en%20PettyPets.%0A%0ANombre%20y%20empresa%3A%20%0ATipo%20de%20inter%C3%A9s%20%28compra%20de%20la%20app%2C%20licencia%2C%20inversi%C3%B3n%2C%20otro%29%3A%20%0ACu%C3%A9ntame%20brevemente%3A%20%0A" class="btn-secondary mt-5">Hablar de negocio</a>
+          </div>
+        </div>
+        <p class="mt-8 text-center text-sm text-ink-soft">
+          <a href="mailto:zammirandrade@gmail.com" class="font-semibold text-brand-700 underline underline-offset-2">zammirandrade@gmail.com</a>
+          <span aria-hidden="true" class="mx-2">·</span>
+          <a href="https://github.com/Zammir117" rel="noopener" class="font-semibold text-brand-700 underline underline-offset-2">GitHub: Zammir117</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ FAQ -->
+    <section id="faq" class="section bg-[#F8FAF9]" aria-labelledby="faq-titulo">
+      <div class="container-site max-w-3xl">
+        <p class="eyebrow text-center">Preguntas frecuentes</p>
+        <h2 id="faq-titulo" class="section-title text-center">Lo que más nos preguntan</h2>
+        <div class="mt-10 space-y-3">
+          <details class="faq-item">
+            <summary>¿PettyPets funciona sin internet?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Sí. Todos los cálculos, el carnet, el QR, el semáforo de alimentos, los horarios y las alarmas funcionan dentro del celular, sin conexión. Internet solo se necesita para iniciar sesión con Google, sincronizar un hogar compartido y eliminar una cuenta vinculada.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo funciona el hogar compartido?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">El propietario vincula su cuenta de Google, crea el hogar y genera desde Perfil un código de invitación de 10 caracteres que vence a los 7 días. Los cuidadores se unen con ese código. Mascotas, vacunas, tratamientos, horarios y tomas se sincronizan en tiempo real; cada toma queda firmada con el nombre de quien la dio y, si dos personas la marcan al mismo tiempo, solo cuenta la primera.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿PettyPets reemplaza al veterinario?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">No. PettyPets es una herramienta informativa, organizativa y preventiva. No sustituye el diagnóstico, la prescripción ni la atención presencial de un médico veterinario. Ante una emergencia, acude de inmediato a un veterinario.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿PettyPets es gratuita?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Sí. PettyPets es gratuita para los tutores: no tiene compras dentro de la app, no muestra anuncios y no usa el identificador de publicidad del celular.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Estará disponible para iPhone?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Por ahora PettyPets es una app para Android 8.0 o superior. La versión para iPhone está en preparación y todavía no tiene fecha de lanzamiento.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo elimino mi cuenta y mis datos?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">En la app: <strong class="text-ink">Perfil → tarjeta “Privacidad y cuenta” → “Eliminar mi cuenta y todos mis datos”</strong>. Si ya desinstalaste la app, escribe a zammirandrade@gmail.com desde el correo de tu cuenta de Google con el asunto “Eliminar cuenta PettyPets”. Todos los detalles están en <a href="eliminar-cuenta.html" class="font-semibold text-brand-700 underline underline-offset-2">Eliminar cuenta</a>.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué datos recopila PettyPets?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">En modo local todo queda en el celular. Si vinculas Google, se guardan tu nombre, correo y foto de perfil de Google y los datos de tu hogar en Firebase. Con tu permiso, que puedes retirar en Perfil, se envían estadísticas de uso y reportes de fallos sin tu nombre, tu correo, nombres de mascotas, fotos ni lo que escribes. Las fotos de las mascotas y de los carnés nunca salen del celular. Lee la <a href="privacidad.html" class="font-semibold text-brand-700 underline underline-offset-2">política de privacidad</a>.</div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo me uno a la beta?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Escribe a zammirandrade@gmail.com con el asunto “Quiero unirme a la beta cerrada de PettyPets” e indica el correo de Gmail que usas en Google Play. Cuando Google apruebe la prueba cerrada recibirás el enlace para instalar la app desde Google Play.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ CTA BETA -->
+    <section class="on-dark bg-brand-600" aria-labelledby="cta-titulo">
+      <div class="container-site flex flex-col items-center gap-6 py-14 text-center text-white lg:flex-row lg:justify-between lg:text-left">
+        <div>
+          <h2 id="cta-titulo" class="text-2xl font-extrabold sm:text-3xl">Sé de las primeras familias en probar PettyPets</h2>
+          <p class="mt-2 text-brand-50">La prueba cerrada en Google Play abre muy pronto. Déjanos tu correo de Gmail y te avisamos.</p>
+        </div>
+        <a href="mailto:zammirandrade@gmail.com?subject=Quiero%20unirme%20a%20la%20beta%20cerrada%20de%20PettyPets&amp;body=Hola%2C%20Johhan%3A%0A%0AQuiero%20probar%20PettyPets%20antes%20del%20lanzamiento.%0A%0ACorreo%20de%20Google%20%28Gmail%29%20que%20uso%20en%20Google%20Play%3A%20%0AModelo%20de%20celular%20y%20versi%C3%B3n%20de%20Android%3A%20%0AEspecies%20que%20cuido%3A%20%0A%0AGracias." class="btn-light shrink-0 px-7 text-base">Únete a la beta</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="on-dark bg-brand-950 text-brand-50">
+    <div class="container-site grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg font-extrabold text-white">
+          <picture>
+            <source srcset="assets/img/logo-96.webp" type="image/webp">
+            <img src="assets/logo.png" width="40" height="40" alt="" loading="lazy" class="h-10 w-10 rounded-xl">
+          </picture>
+          <span class="text-lg">PettyPets</span>
+        </a>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-brand-100">Gestión clínica y cuidado de mascotas en familia. Hecha en Santiago de Cali, Colombia.</p>
+        <p class="mt-4 text-xs text-brand-200">PettyPets no reemplaza la consulta veterinaria.</p>
+      </div>
+      <nav aria-label="Legal">
+        <h2 class="text-sm font-bold uppercase tracking-wide text-white">Legal y ayuda</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a class="rounded hover:text-white hover:underline" href="privacidad.html">Política de privacidad</a></li>
+          <li><a class="rounded hover:text-white hover:underline" href="terminos.html">Términos de uso</a></li>
+          <li><a class="rounded hover:text-white hover:underline" href="eliminar-cuenta.html">Eliminar cuenta y datos</a></li>
+          <li><a class="rounded hover:text-white hover:underline" href="soporte.html">Soporte</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-wide text-white">Contacto</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a class="rounded hover:text-white hover:underline" href="mailto:zammirandrade@gmail.com">zammirandrade@gmail.com</a></li>
+          <li><a class="rounded hover:text-white hover:underline" href="https://github.com/Zammir117" rel="noopener">GitHub: Zammir117</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <p class="container-site py-5 text-xs text-brand-200">© <span data-year>2026</span> PettyPets — Johhan Zammir Soto Andrade. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
