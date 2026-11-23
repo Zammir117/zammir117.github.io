@@ -22,7 +22,7 @@
   <meta property="og:image" content="https://zammir117.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Logo de PettyPets: un cachorro Rottweiler sobre fondo turquesa, con el texto Gestión clínica y cuidado de mascotas en familia.">
+  <meta property="og:image:alt" content="Logo de PettyPets junto a dos capturas de la app: la pantalla Cuidado de Chester y el semáforo de alimentos.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PettyPets — Gestión clínica y cuidado de mascotas en familia">
   <meta name="twitter:description" content="Carnet veterinario con QR, auditor de vacunas, nutrición precisa y Modo Enfermería compartido para 8 especies.">
@@ -187,51 +187,12 @@
           </ul>
         </div>
 
-        <!-- Mockup de teléfono: muestra assets/screenshots/hero.webp; si aún no existe, queda la vista de respaldo. -->
+        <!-- Mockup de teléfono con la captura real de la pantalla Cuidado (sin lazy: es el elemento principal). -->
         <div class="relative">
           <div class="phone">
             <div class="phone-notch" aria-hidden="true"></div>
             <div class="phone-screen">
-              <img src="assets/screenshots/hero.webp" width="1080" height="2340" alt="Pantalla Cuidado de PettyPets con los indicadores diarios de la mascota" fetchpriority="high" decoding="async" onerror="this.remove()">
-              <!-- Vista de respaldo (texto ilustrativo, no es una captura real) -->
-              <div class="flex h-full flex-col" aria-hidden="true">
-                <div class="bg-gradient-to-b from-brand-600 to-brand-900 px-4 pb-5 pt-9 text-white">
-                  <div class="flex items-center gap-2">
-                    <picture>
-                      <source srcset="assets/img/logo-96.webp" type="image/webp">
-                      <img src="assets/logo.png" width="32" height="32" alt="" class="h-8 w-8 rounded-lg">
-                    </picture>
-                    <div class="leading-tight">
-                      <p class="text-[11px] opacity-80">Cuidado de hoy</p>
-                      <p class="text-sm font-bold">Tu mascota</p>
-                    </div>
-                  </div>
-                  <div class="mt-4 rounded-xl bg-white/15 p-3">
-                    <p class="text-[10px] uppercase tracking-wide opacity-80">Condición corporal</p>
-                    <div class="mt-1 flex items-center gap-2">
-                      <span class="h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
-                      <p class="text-xs font-semibold">Peso dentro de la curva de su raza</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid grid-cols-2 gap-2 p-3">
-                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Comida</p><p class="text-sm font-bold text-orange-700">g / día</p></div>
-                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Agua</p><p class="text-sm font-bold text-cyan-700">ml / día</p></div>
-                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Tomas al día</p><p class="text-sm font-bold text-ink">Horario</p></div>
-                  <div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] text-ink-soft">Ejercicio</p><p class="text-sm font-bold text-violet-700">min / día</p></div>
-                </div>
-                <div class="mx-3 rounded-xl border-l-4 border-red-500 bg-white p-2.5 shadow-sm">
-                  <p class="text-[10px] font-semibold text-red-700">Modo Enfermería</p>
-                  <p class="text-xs text-ink">Próxima dosis · confirmar toma</p>
-                </div>
-                <div class="mx-3 mt-2 rounded-xl border-l-4 border-cyan-500 bg-white p-2.5 shadow-sm">
-                  <p class="text-[10px] font-semibold text-cyan-700">Carnet</p>
-                  <p class="text-xs text-ink">Refuerzo de vacuna pendiente</p>
-                </div>
-                <div class="mt-auto grid grid-cols-5 border-t border-ink/10 bg-white px-2 py-2 text-center text-[9px] text-ink-soft">
-                  <span class="font-bold text-brand-700">Cuidado</span><span>Comidas</span><span>Enfermería</span><span>Carnet</span><span>Semáforo</span>
-                </div>
-              </div>
+              <img src="assets/screenshots/cuidado-720.webp" srcset="assets/screenshots/cuidado-360.webp 360w, assets/screenshots/cuidado-720.webp 720w" sizes="(min-width: 640px) 270px, 240px" width="720" height="1530" alt="Pantalla Cuidado de Chester, un Rottweiler de 2 meses y 10 kg, con el simulador de crecimiento y el semáforo de condición corporal en verde" fetchpriority="high" decoding="async">
             </div>
           </div>
         </div>
@@ -496,6 +457,97 @@
       </div>
     </section>
 
+    <!-- ============================================================ CAPTURAS -->
+    <section id="capturas" class="section overflow-hidden bg-white" aria-labelledby="capturas-titulo">
+      <div class="container-site">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="eyebrow">Así se ve PettyPets</p>
+            <h2 id="capturas-titulo" class="section-title">Capturas reales de la app</h2>
+            <p class="section-lead">Pantallas de la app con Chester, un Rottweiler de 2 meses. Toca una captura para verla en grande.</p>
+          </div>
+          <div class="hidden shrink-0 gap-2 sm:flex">
+            <button type="button" class="gallery-arrow" data-gallery-prev aria-label="Captura anterior" aria-controls="galeria">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+            </button>
+            <button type="button" class="gallery-arrow" data-gallery-next aria-label="Captura siguiente" aria-controls="galeria">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <ul id="galeria" class="gallery-track" data-gallery tabindex="0" aria-label="Capturas de PettyPets. Desplázate horizontalmente para ver más.">
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/cuidado-720.webp" data-caption="Cuidado: perfil de Chester con su peso, el simulador ±1 mes y el semáforo de condición corporal." aria-label="Ampliar captura: Cuidado">
+                <img src="assets/screenshots/cuidado-360.webp" srcset="assets/screenshots/cuidado-360.webp 360w, assets/screenshots/cuidado-720.webp 720w" sizes="240px" width="360" height="765" alt="Pantalla Cuidado de Chester con su peso de 10 kg, el simulador de crecimiento y el semáforo de condición corporal en verde" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Cuidado</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">Peso, simulador ±1 mes, QR a un toque y semáforo de condición corporal en verde.</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/carnet-qr-720.webp" data-caption="Certificado clínico digital de Chester con su resumen clínico. El código QR está alterado por privacidad." aria-label="Ampliar captura: Carnet con QR">
+                <img src="assets/screenshots/carnet-qr-360.webp" srcset="assets/screenshots/carnet-qr-360.webp 360w, assets/screenshots/carnet-qr-720.webp 720w" sizes="240px" width="360" height="765" alt="Certificado clínico digital de Chester con su foto, el código QR alterado por privacidad y su especie, edad, peso, alergias, vacunas y tratamientos" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Carnet con QR</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">Certificado clínico con especie, edad, peso, alergias, vacunas y tratamientos. <span class="text-xs">(QR alterado por privacidad.)</span></p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/semaforo-720.webp" data-caption="Semáforo ¿Puede comer esto?: el aguacate es peligroso para Chester, con el motivo y cómo evitarlo." aria-label="Ampliar captura: Semáforo nutricional">
+                <img src="assets/screenshots/semaforo-360.webp" srcset="assets/screenshots/semaforo-360.webp 360w, assets/screenshots/semaforo-720.webp 720w" sizes="240px" width="360" height="765" alt="Semáforo ¿Puede comer esto? marcando el aguacate como peligroso para Chester por riesgo de pancreatitis y obstrucción" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Semáforo nutricional</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">El aguacate sale en rojo para Chester, con el motivo y cómo evitarlo.</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/comidas-720.webp" data-caption="Comidas: 295 g al día en 4 tomas de 74 g, con el horario evaluado como óptimo." aria-label="Ampliar captura: Comidas y porciones">
+                <img src="assets/screenshots/comidas-360.webp" srcset="assets/screenshots/comidas-360.webp 360w, assets/screenshots/comidas-720.webp 720w" sizes="240px" width="360" height="765" alt="Plan de comidas de Chester con meta de 295 g al día en 4 tomas de 74 g y el horario marcado como óptimo" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Comidas y porciones</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">295 g al día en 4 tomas de 74 g, con el horario evaluado como óptimo.</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/enfermeria-720.webp" data-caption="Modo Enfermería: toma pendiente con el botón Dar dosis, el auditor de dosis y el tratamiento activo." aria-label="Ampliar captura: Modo Enfermería">
+                <img src="assets/screenshots/enfermeria-360.webp" srcset="assets/screenshots/enfermeria-360.webp 360w, assets/screenshots/enfermeria-720.webp 720w" sizes="240px" width="360" height="765" alt="Modo Enfermería de Chester con una toma pendiente, el botón Dar dosis y un tratamiento activo cada 12 horas" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Modo Enfermería</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">Toma pendiente con “Dar dosis”, auditor de dosis y tratamiento cada 12 horas.</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery-item" data-gallery-item>
+            <figure>
+              <button type="button" class="shot-phone" data-lightbox data-full="assets/screenshots/tienda-720.webp" data-caption="Tienda Ideal: alimento recomendado para un Rottweiler de 2 meses, con el porqué y el precio estimado." aria-label="Ampliar captura: Tienda Ideal">
+                <img src="assets/screenshots/tienda-360.webp" srcset="assets/screenshots/tienda-360.webp 360w, assets/screenshots/tienda-720.webp 720w" sizes="240px" width="360" height="765" alt="Tienda Ideal con un alimento para cachorro Rottweiler, la explicación de por qué es para Chester y su precio estimado en pesos" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="mt-4">
+                <p class="font-bold text-ink">Tienda Ideal</p>
+                <p class="mt-1 text-sm leading-relaxed text-ink-soft">Alimento elegido para un Rottweiler de 2 meses, con el porqué y el precio estimado.</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <div class="mt-4 flex justify-center gap-1" data-gallery-dots role="group" aria-label="Elegir captura"></div>
+      </div>
+    </section>
+
     <!-- ============================================================ PARA EMPRESAS -->
     <section id="empresas" class="section on-dark relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-950 to-[#0B1F1C] text-white" aria-labelledby="empresas-titulo">
       <div aria-hidden="true" class="pointer-events-none absolute -right-24 top-10 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl"></div>
@@ -600,19 +652,23 @@
             <dl class="mt-6 space-y-5">
               <div>
                 <dt class="font-semibold text-ink">WSAVA — Asociación Mundial de Veterinarios de Pequeños Animales</dt>
-                <dd class="mt-1 text-sm text-ink-soft">Guías de vacunación de perros y gatos: vacunas esenciales y vacunas no recomendadas.</dd>
+                <dd class="mt-1 text-sm text-ink-soft">Guías globales de nutrición y de vacunación de perros y gatos: requerimiento energético, condición corporal y vacunas esenciales, complementarias y no recomendadas.</dd>
               </div>
               <div>
-                <dt class="font-semibold text-ink">AAFP — American Association of Feline Practitioners</dt>
-                <dd class="mt-1 text-sm text-ink-soft">Sitios de aplicación de vacunas en gatos para prevenir el sarcoma posvacunal.</dd>
+                <dt class="font-semibold text-ink">AAFP / ABCD — guías felinas</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Sitios de aplicación de vacunas en gatos, prevención del sarcoma posvacunal y prueba de FeLV antes de vacunar.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-ink">NRC — National Research Council</dt>
+                <dd class="mt-1 text-sm text-ink-soft"><em>Nutrient Requirements</em> de perros y gatos, caballos, cerdos y bovinos: energía, agua y nutrientes por especie, etapa de vida y peso.</dd>
               </div>
               <div>
                 <dt class="font-semibold text-ink">ICA — Instituto Colombiano Agropecuario</dt>
                 <dd class="mt-1 text-sm text-ink-soft">Programas sanitarios oficiales: Aftosa, Brucelosis, Peste Porcina Clásica, Rabia de origen silvestre, Encefalomielitis Equina Venezolana y Newcastle.</dd>
               </div>
               <div>
-                <dt class="font-semibold text-ink">Fedequinas y nutrición energética</dt>
-                <dd class="mt-1 text-sm text-ink-soft">Requisitos sanitarios para ferias equinas y fórmula de requerimiento energético en reposo (RER) ajustada por etapa de vida.</dd>
+                <dt class="font-semibold text-ink">Fedequinas y medicina de especies exóticas</dt>
+                <dd class="mt-1 text-sm text-ink-soft">Requisitos sanitarios para ferias equinas y formularios de aves, roedores y reptiles para dosis por mg/kg y fármacos prohibidos por especie.</dd>
               </div>
             </dl>
             <p class="mt-6 rounded-xl bg-white p-4 text-sm text-ink-soft">PettyPets usa estas guías como referencia. <strong class="text-ink">No está avalada ni certificada</strong> por estas entidades. <a href="terminos.html#bibliografia" class="font-semibold text-brand-700 underline underline-offset-2">Ver la bibliografía completa</a>.</p>
@@ -740,6 +796,17 @@
       </div>
     </section>
   </main>
+
+  <!-- Ampliación de capturas (dialog nativo: Esc, foco atrapado y fondo inerte) -->
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Captura ampliada">
+    <div class="relative flex flex-col items-center">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="Cerrar captura ampliada">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <img data-lightbox-img width="720" height="1530" alt="" class="h-auto max-h-[80vh] w-auto max-w-full rounded-[1.6rem] bg-white">
+      <p data-lightbox-caption class="mt-4 max-w-md text-center text-sm leading-relaxed text-white"></p>
+    </div>
+  </dialog>
 
   <!-- ============================================================ FOOTER -->
   <footer class="on-dark bg-brand-950 text-brand-50">

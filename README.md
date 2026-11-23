@@ -11,7 +11,7 @@ Landing comercial y portal legal de la app **PettyPets** (`co.pettypets.app`), p
 
 ```
 pettypets-web/
-├── index.html              Landing (hero, especies, funcionalidades, empresas, respaldo, quiénes somos, contacto, FAQ)
+├── index.html              Landing (hero, especies, funcionalidades, capturas, empresas, respaldo, quiénes somos, contacto, FAQ)
 ├── privacidad.html         Política de privacidad (Ley 1581 de 2012)
 ├── terminos.html           Términos de uso + descargo veterinario + bibliografía
 ├── eliminar-cuenta.html    Eliminación de cuenta y datos (requisito de Google Play)
@@ -28,7 +28,7 @@ pettypets-web/
     ├── logo.png            Logo 256 px (copia del logo de la app)
     ├── og-image.png        Imagen para redes 1200×630
     ├── img/                logo-96/192/512.webp e icons/*.webp (íconos de pestañas de la app)
-    └── screenshots/        Capturas de la app (ver su README.md)
+    └── screenshots/        Capturas reales en WebP 360/720 px (ver README.md y catalogo.md)
 ```
 
 ## Compilar Tailwind (PowerShell)
@@ -64,7 +64,7 @@ La página 404 usa rutas absolutas (`/assets/...`): se ve bien en el servidor lo
 
 ## Capturas y logo
 
-- **Capturas:** guárdalas en `assets/screenshots/` con los nombres de [assets/screenshots/README.md](assets/screenshots/README.md). Basta con `hero.webp` (1080×2340, WebP): el mockup del inicio la muestra automáticamente.
+- **Capturas:** el hero y la galería “Así se ve PettyPets” usan las copias limpias de `assets/screenshots/` (ver [README](assets/screenshots/README.md) y [catálogo](assets/screenshots/catalogo.md)). Los originales van en `Imagenes para poner en la pagina/`, que está en `.gitignore` y **nunca se publica**.
 - **Logo:** `assets/logo.png` y `assets/img/logo-*.webp` salen de `res/drawable-nodpi/logo_mascotas.png` de la app. Si cambia el logo, reemplaza esos archivos con los mismos nombres y tamaños.
 - **Colores:** el color de marca es el teal de la app (`#00796B`, `brand-600`). Los acentos por módulo usan la paleta de Tailwind (emerald, orange, cyan, red, violet) en tonos 700/800 cuando son texto, para cumplir WCAG AA.
 
@@ -99,7 +99,7 @@ En 1–3 minutos el sitio queda en https://zammir117.github.io.
 
 | Marcador | Archivo | Qué hacer |
 |---|---|---|
-| `{{VERIFICAR}}` (4 veces) | `terminos.html` §14 Bibliografía | Confirmar la versión de la guía WSAVA que usa la app, las resoluciones del ICA, el documento de Fedequinas y la fuente de la fórmula RER |
+| `{{VERIFICAR}}` (6 veces) | `terminos.html` §14 Bibliografía | Confirmar la actualización de la guía de vacunación WSAVA, los títulos de las guías ABCD, las ediciones NRC de bovinos, las resoluciones del ICA, el documento de Fedequinas y las obras de especies exóticas |
 | `{{URL_PLAY_STORE}}` | `index.html` (comentario del hero) | Al publicar, cambiar el bloque “Próximamente en Google Play” por la insignia oficial enlazada a la ficha |
 
 Datos ya resueltos con el proyecto y tus respuestas: correo `zammirandrade@gmail.com`, ciudad Santiago de Cali, fotos solo locales, Tienda sin afiliados ni comisiones, app gratuita y fecha de vigencia 22 de noviembre de 2026.
@@ -134,7 +134,7 @@ Datos ya resueltos con el proyecto y tus respuestas: correo `zammirandrade@gmail
 
 ### Sitio
 
-- [ ] Subir `assets/screenshots/hero.webp`.
+- [x] Capturas reales en el hero y en la galería (17 revisadas; ver `catalogo.md`). Pendientes: las de la sección “Capturas pendientes” del catálogo.
 - [ ] Al publicar la app, reemplazar los botones de estado por las insignias oficiales de Google Play y App Store (solo cuando estén publicadas y enlazadas).
 - [ ] Revisar Lighthouse en móvil (objetivo ≥ 90 en las 4 categorías) en la URL publicada.
 - [ ] Probar los 5 enlaces en vivo y que los botones de correo abran el asunto correcto.
